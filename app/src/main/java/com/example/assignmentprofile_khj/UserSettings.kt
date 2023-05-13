@@ -16,8 +16,8 @@ import android.provider.MediaStore
 
 class UserSettings : AppCompatActivity() {
 
-    lateinit var profilePicture: ImageView
-    lateinit var choosePicture: ImageButton
+    private lateinit var profilePicture: ImageView
+    private lateinit var choosePicture: ImageButton
     private val pickImage = 100
     private var imageUri: Uri? = null
 
