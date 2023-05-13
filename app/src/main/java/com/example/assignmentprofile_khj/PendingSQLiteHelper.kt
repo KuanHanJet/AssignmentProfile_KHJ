@@ -1,5 +1,6 @@
 package com.example.assignmentprofile_khj
 
+/**
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
@@ -149,3 +150,4 @@ class PendingSQLiteHelper(context: Context) :
         return attribute
     }
 }
+        */

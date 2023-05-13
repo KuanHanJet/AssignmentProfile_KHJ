@@ -1,5 +1,5 @@
 package com.example.assignmentprofile_khj.database
-
+/**
 import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
@@ -205,4 +205,4 @@ class UserSQLiteHelper(context: Context) :
 
         return user
     }
-}
+}*/

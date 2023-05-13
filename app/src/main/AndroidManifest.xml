@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,21 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AssignmentProfile_KHJ"
         tools:targetApi="33">
-        <activity
-            android:name=".CompanyProfileSettingsFragment"
-            android:exported="false" />
-        <activity
-            android:name=".CompanyHelpFragment"
-            android:exported="false" />
-        <activity
-            android:name=".CompanyFeedbackFragment"
-            android:exported="false" />
-        <activity
-            android:name=".CompanyAllBadgesFragment"
-            android:exported="false" />
-        <activity
-            android:name=".CompanySettings"
-            android:exported="false" />
         <activity
             android:name=".UserAllBadgesFragment"
             android:exported="false" />
@@ -38,9 +24,6 @@
             android:exported="false" />
         <activity
             android:name=".UserProfileSettingsFragment"
-            android:exported="false" />
-        <activity
-            android:name=".UserPostHistoryFragment"
             android:exported="false" />
         <activity
             android:name=".UserSettings"

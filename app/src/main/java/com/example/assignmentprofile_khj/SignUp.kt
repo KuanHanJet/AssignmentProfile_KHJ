@@ -1,5 +1,6 @@
 package com.example.assignmentprofile_khj
 
+/**
 import android.content.Intent
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.assignmentprofile_khj.database.UserModel
 import com.example.assignmentprofile_khj.databinding.SignUpBinding
 import com.example.assignmentprofile_khj.database.UserSQLiteHelper
+*/
 
 /**
 class SignUp : AppCompatActivity() {

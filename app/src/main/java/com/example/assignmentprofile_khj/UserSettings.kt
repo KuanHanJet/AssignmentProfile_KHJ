@@ -1,13 +1,25 @@
 package com.example.assignmentprofile_khj
 
+import android.app.Activity
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
+import android.widget.ImageView
+import android.widget.Toast
+import android.os.Build
+import android.os.Build.VERSION_CODES
+import android.provider.MediaStore
 
 class UserSettings : AppCompatActivity() {
 
-
+    lateinit var profilePicture: ImageView
+    lateinit var choosePicture: ImageButton
+    private val pickImage = 100
+    private var imageUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,6 +28,15 @@ class UserSettings : AppCompatActivity() {
         //display username (login email text pass to user profile, open sqllite helper, use conditionalgetattribute function pass in username, emailtext, conditionalattribute return a string,
         //(continue) display username = conditionalgetattribute
 
+        //profile picture
+        profilePicture = findViewById(R.id.profile_pic)
+        choosePicture = findViewById(R.id.choose_profile_pic)
+
+        //activate image button and choose picture
+        choosePicture.setOnClickListener {
+            val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+            startActivityForResult(gallery, pickImage)
+        }
 
         //activate all badges button and go to the all badges page
         val all_badges = findViewById<Button>(R.id.all_badges)
@@ -62,4 +83,14 @@ class UserSettings : AppCompatActivity() {
             //startActivity(intent6)
        // }
     }
+
+    //function take picture from gallery and display the profile picture
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == RESULT_OK && requestCode == pickImage) {
+            imageUri = data?.data
+            profilePicture.setImageURI(imageUri)
+        }
+    }
+
 }

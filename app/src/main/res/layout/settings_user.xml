@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.037" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/profile_pic"
         android:layout_width="105dp"
         android:layout_height="103dp"
         android:layout_marginEnd="16dp"
@@ -31,6 +31,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@android:drawable/ic_menu_gallery"
         tools:layout_editor_absoluteY="4dp" />
+
+    <ImageButton
+        android:id="@+id/choose_profile_pic"
+        android:layout_width="48dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginBottom="36dp"
+        android:contentDescription="choose profile picture"
+        app:layout_constraintBottom_toTopOf="@+id/s_e_t_t_i_n_g_s"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:srcCompat="@android:drawable/ic_menu_add" />
 
     <Button
         android:id="@+id/all_badges"

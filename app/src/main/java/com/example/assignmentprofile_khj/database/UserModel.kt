@@ -1,5 +1,5 @@
 package com.example.assignmentprofile_khj.database
-
+/**
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -10,4 +10,4 @@ data class UserModel (
     var password: String = "",
     var role: String = "",
     var companyName: String = "",
-)
+)*/
