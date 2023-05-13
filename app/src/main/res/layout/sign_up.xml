@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/signUpCompany"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/touchSize"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:autofillHints="name"
+        android:clickable="false"
+        android:ems="10"
+        android:enabled="false"
+        android:focusableInTouchMode="false"
+        android:hint="@string/enter_company"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/roleSelection"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <TextView
+        android:id="@+id/signUpTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/create_account"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/signUpUsername"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/touchSize"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:autofillHints="name"
+        android:ems="10"
+        android:hint="@string/enter_username"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpTitle" />
+
+    <EditText
+        android:id="@+id/signUpID"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/touchSize"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:autofillHints="emailAddress"
+        android:ems="10"
+        android:hint="@string/enter_email_or_phone_number"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpUsername" />
+
+    <EditText
+        android:id="@+id/signUpPassword"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/touchSize"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpID" />
+
+    <EditText
+        android:id="@+id/signUpReenter"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:autofillHints="password"
+        android:ems="10"
+        android:hint="@string/reenter_password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpPassword" />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/touchSize"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginBottom="32dp"
+        android:text="@string/sign_up"
+        app:layout_constraintBottom_toTopOf="@+id/signUpReminder"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signUpNavigate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="92dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/login_now"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/signUpReminder" />
+
+    <TextView
+        android:id="@+id/signUpReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginBottom="@dimen/margin"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintEnd_toStartOf="@id/signUpNavigate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/roleSelection"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:contentDescription="@string/select_your_role"
+        app:layout_constraintBottom_toTopOf="@+id/signUpButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpReenter"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/signUpPasswordUnhide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/signUpPassword"
+        app:layout_constraintEnd_toEndOf="@+id/signUpPassword"
+        app:layout_constraintTop_toTopOf="@+id/signUpPassword"
+        app:srcCompat="@drawable/baseline_remove_red_eye_24" />
+
+    <TextView
+        android:id="@+id/signUpPasswordError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="4dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/signUpReenter"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signUpCompanyError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpCompany" />
+
+    <TextView
+        android:id="@+id/signUpReenterError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="4dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/roleSelection"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signUpIDError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="4dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/signUpPassword"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/signUpUsernameError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginBottom="4dp"
+        android:text="TextView"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="10sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/signUpID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpUsername"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/signUpReenterUnhide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/signUpReenter"
+        app:layout_constraintEnd_toEndOf="@+id/signUpReenter"
+        app:layout_constraintTop_toTopOf="@+id/signUpReenter"
+        app:srcCompat="@drawable/baseline_remove_red_eye_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

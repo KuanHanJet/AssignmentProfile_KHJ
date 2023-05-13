@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">AssignmentProfile_KHJ</string>
+    <string name="user_pro_settings">PROFILE SETTINGS</string>
+    <string name="user_help">HELP</string>
+    <string name="user_feedback">FEEDBACK</string>
+    <string name="user_logOut">LOG OUT</string>
+    <string name="user_settings">SETTINGS</string>
+    <string name="user_allBadges">ALL BADGES</string>
+    <string name="AllBadges2">ALL BADGES</string>
+    <string name="user_allBadges2">ALL BADGES</string>
+    <string name="user_settings2">SETTINGS</string>
+    <string name="user_settings4">SETTINGS</string>
+    <string name="user_allBadges4">ALL BADGES</string>
+    <string name="enter_company">Enter Company</string>
+</resources>
